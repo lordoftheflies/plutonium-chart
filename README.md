@@ -1,5 +1,7 @@
 # \<plutonium-chart\>
 
+[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/lordoftheflies/plutonium-chart)
+
 Polymer 3.0 based ChartJS wrapper.
 
 ## P
