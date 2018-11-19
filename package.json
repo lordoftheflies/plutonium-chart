@@ -1,6 +1,7 @@
 {
   "name": "@lordoftheflies/plutonium-chart",
-  "version": "0.0.2",
+  "version": "0.0.3",
+  "private": false,
   "description": "Chart visualization wrapper in Polymer for D3",
   "main": "plutonium-chart.js",
   "repository": {
