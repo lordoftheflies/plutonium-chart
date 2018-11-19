@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
 
@@ -9,25 +9,59 @@
     <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
 
     <script type="module">
-      import '@polymer/iron-demo-helpers/demo-pages-shared-styles';
-      import '@polymer/iron-demo-helpers/demo-snippet';
-    </script>
+        import '@polymer/iron-demo-helpers/demo-pages-shared-styles';
+        import '@polymer/iron-demo-helpers/demo-snippet';</script>
 
-    <script type="module" src=".."></script>
+    <script type="module" src="../plutonium-chart.js"></script>
+    <script type="module" src="../plutonium-bar-chart.js"></script>
 
     <custom-style>
-      <style is="custom-style" include="demo-pages-shared-styles">
-      </style>
+        <style is="custom-style" include="demo-pages-shared-styles">
+        </style>
     </custom-style>
-  </head>
-  <body>
-    <div class="vertical-section-container centered">
-      <h3>Basic plutonium-chart demo</h3>
-      <demo-snippet>
+</head>
+<body>
+<div class="vertical-section-container centered">
+    <h3>Basic plutonium-chart demo</h3>
+    <demo-snippet>
         <template>
-          <plutonium-chart></plutonium-chart>
+            <plutonium-chart></plutonium-chart>
         </template>
-      </demo-snippet>
-    </div>
-  </body>
+    </demo-snippet>
+</div>
+
+<div class="vertical-section-container centered">
+    <h3>Basic plutonium-bar-chart demo</h3>
+    <demo-snippet>
+        <template>
+            <plutonium-bar-chart id="barChart0" data=''></plutonium-bar-chart>
+
+            <script>
+                let barChart0 = document.getElementById('barChart0');
+                barChart0.data = {
+                    labels: ["January", "February", "March", "April", "May", "June", "July"],
+                    datasets: [
+                        {
+                            label: "My First dataset",
+                            backgroundColor: "rgba(220,220,220,0.2)",
+                            borderColor: "rgba(220,220,220,1)",
+                            borderWidth: 1,
+                            data: [65, 59, 80, 81, 56, 55, 40]
+                        },
+                        {
+                            label: "My Second dataset",
+                            backgroundColor: "rgba(151,187,205,0.2)",
+                            borderColor: "rgba(151,187,205,1)",
+                            borderWidth: 1,
+                            data: [28, 48, 40, 19, 86, 27, 90]
+                        }
+                    ]
+                };
+            </script>
+        </template>
+    </demo-snippet>
+
+
+</div>
+</body>
 </html>
