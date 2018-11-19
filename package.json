@@ -7,9 +7,7 @@
     "type": "git",
     "url": "https://github.com/lordoftheflies/plutonium-chart.git"
   },
-  "keywords": [
-
-  ],
+  "keywords": [],
   "author": "lordoftheflies <laszlo.hegedus@cherubits.hu>",
   "bugs": {
     "url": "https://github.com/lordoftheflies/plutonium-chart/issues"
