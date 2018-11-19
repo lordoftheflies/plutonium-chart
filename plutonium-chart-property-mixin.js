@@ -1,9 +1,11 @@
+import {dedupingMixin} from '@polymer/polymer/lib/utils/mixin.js';
+
 // Create my namespace, if it doesn't exist
 if (!window.Plutonium) {
     window.Plutonium = {};
 }
 
-Fmeter.ChartPropertyMixin = Polymer.dedupingMixin((superClass) => class extends superClass {
+export const ChartPropertyMixin = dedupingMixin((superClass) => class extends superClass {
     static get properties() {
         return {
             type: {

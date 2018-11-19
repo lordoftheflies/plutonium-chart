@@ -5,7 +5,6 @@ import {IronResizableBehavior} from '@polymer/iron-resizable-behavior/iron-resiz
 import {ChartContextMixin} from './plutonium-chart-context-mixin.js';
 import {ChartPropertyMixin} from './plutonium-chart-property-mixin.js';
 import {ChartResizeMixin} from "./plutonium-chart-resize-mixin";
-import './plutonium-chart-styles.js';
 
 /**
  * `plutonium-chart`
@@ -15,10 +14,7 @@ import './plutonium-chart-styles.js';
  * @polymer
  * @demo demo/index.html
  */
-class PlutoniumChart extends ChartContextMixin(ChartPropertyMixin(ChartResizeMixin(mixinBehaviors([
-        IronResizableBehavior
-    ], PolymerElement)))
-) {
+class PlutoniumLineChart extends ChartContextMixin(ChartPropertyMixin(ChartResizeMixin(mixinBehaviors([IronResizableBehavior], PolymerElement)))) {
     static get template() {
         return html`
        <style include="plutonium-chart-styles"></style>
@@ -37,6 +33,11 @@ class PlutoniumChart extends ChartContextMixin(ChartPropertyMixin(ChartResizeMix
             },
         };
     }
+
+    ready() {
+        super.ready();
+        this._setType('line');
+    }
 }
 
-window.customElements.define('plutonium-chart', PlutoniumChart);
+window.customElements.define('plutonium-line-chart', PlutoniumLineChart);

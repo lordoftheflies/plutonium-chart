@@ -1,10 +1,10 @@
 import {html, PolymerElement} from '@polymer/polymer/polymer-element.js';
-import '@polymer/iron-resizable-behavior/iron-resizable-behavior.js';
-import 'chart.js/dist/Chart.min.js';
-import 'plutonium-chart-context-mixin.js';
-import 'plutonium-chart-property-mixin.js';
-import 'plutonium-chart-resize-mixin.js';
-import 'plutonium-chart-styles.js';
+import {mixinBehaviors} from '@polymer/polymer/lib/legacy/class.js';
+import '/node_modules/chart.js/dist/Chart.min.js';
+import {IronResizableBehavior} from '@polymer/iron-resizable-behavior/iron-resizable-behavior.js';
+import {ChartContextMixin} from './plutonium-chart-context-mixin.js';
+import {ChartPropertyMixin} from './plutonium-chart-property-mixin.js';
+import {ChartResizeMixin} from "./plutonium-chart-resize-mixin";
 
 /**
  * `plutonium-chart`
@@ -14,15 +14,7 @@ import 'plutonium-chart-styles.js';
  * @polymer
  * @demo demo/index.html
  */
-class PlutoniumBarChart extends window.Plutonium.ChartContextMixin(
-    window.Plutonium.ChartPropertyMixin(
-        window.Plutonium.ChartResizeMixin(
-            Polymer.mixinBehaviors([
-                window.Polymer.IronResizableBehavior
-            ], PolymerElement)
-        )
-    )
-) {
+class PlutoniumBarChart extends ChartContextMixin(ChartPropertyMixin(ChartResizeMixin(mixinBehaviors([IronResizableBehavior], PolymerElement)))) {
     static get template() {
         return html`
        <style include="plutonium-chart-styles"></style>
@@ -40,6 +32,12 @@ class PlutoniumBarChart extends window.Plutonium.ChartContextMixin(
                 value: 'plutonium-chart',
             },
         };
+    }
+
+
+    ready() {
+        super.ready();
+        this._setType('bar');
     }
 }
 

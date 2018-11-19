@@ -14,6 +14,7 @@
 
     <script type="module" src="../plutonium-chart.js"></script>
     <script type="module" src="../plutonium-bar-chart.js"></script>
+    <script type="module" src="../plutonium-line-chart.js"></script>
 
     <custom-style>
         <style is="custom-style" include="demo-pages-shared-styles">
@@ -39,6 +40,39 @@
             <script>
                 let barChart0 = document.getElementById('barChart0');
                 barChart0.data = {
+                    labels: ["January", "February", "March", "April", "May", "June", "July"],
+                    datasets: [
+                        {
+                            label: "My First dataset",
+                            backgroundColor: "rgba(220,220,220,0.2)",
+                            borderColor: "rgba(220,220,220,1)",
+                            borderWidth: 1,
+                            data: [65, 59, 80, 81, 56, 55, 40]
+                        },
+                        {
+                            label: "My Second dataset",
+                            backgroundColor: "rgba(151,187,205,0.2)",
+                            borderColor: "rgba(151,187,205,1)",
+                            borderWidth: 1,
+                            data: [28, 48, 40, 19, 86, 27, 90]
+                        }
+                    ]
+                };
+            </script>
+        </template>
+    </demo-snippet>
+
+
+</div>
+<div class="vertical-section-container centered">
+    <h3>Basic plutonium-line-chart demo</h3>
+    <demo-snippet>
+        <template>
+            <plutonium-line-chart id="lineChart0" data=''></plutonium-line-chart>
+
+            <script>
+                let lineChart0 = document.getElementById('lineChart0');
+                lineChart0.data = {
                     labels: ["January", "February", "March", "April", "May", "June", "July"],
                     datasets: [
                         {

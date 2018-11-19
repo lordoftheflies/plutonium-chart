@@ -1,9 +1,11 @@
+import {dedupingMixin} from '@polymer/polymer/lib/utils/mixin.js';
+
 // Create my namespace, if it doesn't exist
 if (!window.Plutonium) {
     window.Plutonium = {};
 }
 
-Plutonium.ChartContextMixin = Polymer.dedupingMixin((superClass) => class extends superClass {
+export const ChartContextMixin = dedupingMixin((superClass) => class extends superClass {
     _measure(cb) {
         function measure() {
             if (this.offsetHeight) {
