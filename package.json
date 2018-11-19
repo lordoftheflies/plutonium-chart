@@ -1,5 +1,5 @@
 {
-  "name": "plutonium-chart",
+  "name": "@lordoftheflies/plutonium-chart",
   "version": "0.0.1",
   "description": "Chart visualization wrapper in Polymer for D3",
   "main": "plutonium-chart.js",
@@ -7,7 +7,12 @@
     "type": "git",
     "url": "https://github.com/lordoftheflies/plutonium-chart.git"
   },
-  "keywords": [],
+  "keywords": [
+    "polymer",
+    "component",
+    "visualization",
+    "plutonium"
+  ],
   "author": "lordoftheflies <laszlo.hegedus@cherubits.hu>",
   "bugs": {
     "url": "https://github.com/lordoftheflies/plutonium-chart/issues"
