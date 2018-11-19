@@ -54,9 +54,9 @@ export const ChartPropertyMixin = dedupingMixin((superClass) => class extends su
                                     return tooltipItems[0].xLabel;
 
                                 },
-                                label: function (tooltipItem, data) {
-                                    return tooltipItem.yLabel + ' dBuV/m';
-                                }
+                                // footer: function (tooltipItem, data) {
+                                //     return tooltipItem[0].yLabel;
+                                // }
                             }
                         },
                         title: {
