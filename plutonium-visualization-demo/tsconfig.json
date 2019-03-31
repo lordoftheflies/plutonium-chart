@@ -17,14 +17,6 @@
     "lib": [
       "es2018",
       "dom"
-    ],
-    "paths": {
-      "plutonium-visualization": [
-        "dist/plutonium-visualization"
-      ],
-      "plutonium-visualization/*": [
-        "dist/plutonium-visualization/*"
-      ]
-    }
+    ]
   }
 }
